@@ -10,7 +10,7 @@ $xmlinfo = simplexml_load_file($url);
 
 $status = $xmlinfo->result->status;
 if($status == 0){
-$error ="SMS has been sent to ".$fullname;
+$error ="SMS has been sent to ";
 }else{
 //echo "Error: Message not sent to ".$fullname."! API Code: ".$status." Contact API provider:";
 }

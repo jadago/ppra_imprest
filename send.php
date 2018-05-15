@@ -7,14 +7,14 @@ $query = mysqli_query($con,$select);
 while($array = mysqli_fetch_array($query))
 {
 $name = "Shilla";
-$phone = "255652309698";
+$phone = "255763158517";
 
 
 // You have phone numbers then send messages 
        $message = "Dear ".$name.", you are reminded to retire your imprest, PPRA:";
        $username="ipsdemo";
 	   $password = "ips**?ips2013";
-	   $sender = "TIB PREMIER";
+	   $sender = "PPRA";
 	   $fullname = "Justine";
 	   send_sms($phone,$sender,$username,$password,$message,$fullname);
 }
