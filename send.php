@@ -14,7 +14,7 @@ $phone = "255763158517";
        $message = "Dear ".$name.", you are reminded to retire your imprest, PPRA:";
        $username="ipsdemo";
 	   $password = "ips**?ips2013";
-	   $sender = "PPRA";
+	   $sender = "15200";
 	   $fullname = "Justine";
 	   send_sms($phone,$sender,$username,$password,$message,$fullname);
 }

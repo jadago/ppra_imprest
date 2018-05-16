@@ -115,7 +115,7 @@ if (isset($_POST['Submit'])) {
                     <h5><i class="fa fa-warning"></i><a href="imprest_retirement_view.php"><font color="white">All Imprest</font></a></h5>
                 </div>
                 <!-- /page title -->
-
+     <p align="right"><a href="imprest_retirement_word.php?eid=<?php echo $id; ?>"> <span class="label label-success">Print in word format</span></a></p>
                 <!-- Form validation -->
                 <form class="form-horizontal" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
                     <div class="row">
@@ -255,12 +255,14 @@ if (isset($_POST['Submit'])) {
                                         $io = "SELECT * FROM item_category WHERE item_id='".$arrayA['item_name']."'";
                                         $queryi = mysqli_query($con,$io);
                                         $arrayi = mysqli_fetch_array($queryi );
+                                        //check imprest table
+                                        
                                         ?>
                                         <tr>
                                             <td><?php echo $counter; ?></td>
                                             <td><?php if($arrayi['name']) echo $arrayi['name'];else echo $result['description']; ?></td>
                                             <td><?php echo $arrayA['description']; ?></td>
-                                            <td><?php echo number_format($result['amount'], 0); ?></td>
+                                            <td><?php echo number_format($arrayA['amount'], 0); ?></td>
                                             <td><?php echo $result['receipt'];?></td>
                                             <td><?php echo number_format($result['amount'],0);?></td>
                                         </tr>
